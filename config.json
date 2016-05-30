@@ -1,0 +1,8 @@
+{
+  "db": {
+    "write":  "postgres://user:password@localhost:5432/db_name",
+    "read":   "postgres://user:password@localhost:5432/db_name",
+    "report": "postgres://user:password@localhost:5432/db_name"
+  }
+
+}
