@@ -1,8 +1,8 @@
 {
+  "log_level": "info",
   "db": {
-    "write":  "postgres://user:password@localhost:5432/db_name",
-    "read":   "postgres://user:password@localhost:5432/db_name",
-    "report": "postgres://user:password@localhost:5432/db_name"
+    "write":  "postgresql://tonyfendall@localhost:5432/tonyfendall",
+    "read":   "postgresql://tonyfendall@localhost:5432/tonyfendall",
+    "report": "postgresql://tonyfendall@localhost:5432/tonyfendall"
   }
-
 }
