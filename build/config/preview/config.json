@@ -1,0 +1,16 @@
+{
+  "logLevel": "info",
+  "db": {
+    "write":  "postgresql://tonyfendall@localhost:5432/tonyfendall",
+    "read":   "postgresql://tonyfendall@localhost:5432/tonyfendall",
+    "report": "postgresql://tonyfendall@localhost:5432/tonyfendall"
+  },
+
+  "auth": {
+    "publicKey": "-----BEGIN PUBLIC KEY-----\nMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAw+ch50y9EEryoNh2OKIzSEO/s8JqtYm3lcPsHjNbjH6Ur8NCJnu85HO3DjJVlTi9vGsriC6eoanO+4RovJbnV3PjpoNDwuyW4wgTLb9A99R3GNydrYTEKMVfWAqXg7gI8EXuzc6U7T2HUBNB+ZuEqYyniZhaVneH4HWLjO3sv0G7p/6ZM3SYr15hBgVjsEOjxKf9VUX8ggtD6odoEizx6mBDj+gQJ5udFVmlY+LcFkdSVgKzhnyxVO7pJRU59qEvrUlDaohk90rfYg+AjKoGIbspm4N+CzYH/8dHugKu/iJ40BJLGuZ+38fk/Iwa416PRwPt7CKAEzwR7b2nlRY6YQIDAQAB\n-----END PUBLIC KEY-----",
+    "options": {
+      "issuer": "https://invenco-nz-preview.tms.invenco.com/auth/realms/TestRealmOne",
+      "audience": null
+    }
+  }
+}

@@ -1,7 +1,6 @@
 
 var restify = require('restify');
 var jwt = require('restify-jwt');
-var fs = require('fs');
 var bunyan = require('bunyan');
 var config = require('./config');
 
@@ -15,8 +14,14 @@ var db = require('./db')(config);
 server.db = db;
 
 
-server.use(restify.bodyParser()); // puts body under req.params and req.body
+// Parse request body and puts properties under req.params (and req.body)
+server.use(restify.bodyParser());
+
+// Adds a child logger under req.log.  This logger includes an internal request id
 server.use(restify.requestLogger());
+
+// Requires JWT auth for all calls.  Puts user object under req.user
+server.use(jwt(config.auth));
 
 
 server.on('after', function(req, res, route, error){
@@ -38,7 +43,6 @@ server.on('after', restify.auditLogger({
 
 var hello = require('./endpoints/hello')(server);
 var dbtest = require('./endpoints/dbtest')(server);
-
 
 
 server.listen(8080, function() {
